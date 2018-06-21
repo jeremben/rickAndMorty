@@ -1,0 +1,6 @@
+<div *ngIf="info">
+    <button mat-button [disabled]="serviceAdmin.logged" (click)="activeDroits()">Activer droits</button><p></p>
+    <button mat-fab color="primary" [disabled]="!info.prev" (click)="clickPrev()">Prev</button> {{page}} / {{info.pages}} <button mat-fab color="primary" [disabled]="!info.next" (click)="clickNext()">Next</button>
+    <mat-nav-list dense><mat-list-item *ngFor="let person of people" (click)="openDialog(person.id)">{{person.name}}</mat-list-item></mat-nav-list>
+    <!--<mat-nav-list dense><mat-list-item *ngFor="let person of people" [routerLink]="['person/', person.id]">{{person.name}}</mat-list-item></mat-nav-list>-->
+</div>

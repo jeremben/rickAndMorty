@@ -1,0 +1,12 @@
+<div *ngIf="person">
+  <img [src]="person.image"/>
+  <h2 align = "center">{{person.name}}</h2>
+  <mat-nav-list>
+    <mat-list-item>{{person.status}}</mat-list-item>
+    <mat-list-item>{{person.species}}</mat-list-item>
+    <mat-list-item>{{person.type}}</mat-list-item>
+    <mat-list-item>{{person.gender}}</mat-list-item>
+  </mat-nav-list>
+  <!--<button [routerLink]="['']">Retour</button>-->
+</div>
+
