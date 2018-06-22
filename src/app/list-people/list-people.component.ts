@@ -6,7 +6,6 @@ import {ShowPersonComponent} from '../show-person/show-person.component';
 import {ServiceAdminService} from '../admin/service-admin.service';
 import {MatListModule} from '@angular/material/list';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogConfig} from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
 
 @Component({
@@ -46,8 +45,6 @@ export class ListPeopleComponent implements OnInit {
     this.people = results.map((person) => new Person(person.id, person.name, person.status, person.species, person.type, person.gender, person.url, person.image));
 
     this.monService.page = this.page;
-
-    console.log(this.people);
   }
 
   clickNext() {

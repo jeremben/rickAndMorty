@@ -1,3 +1,4 @@
+<app-chuck-joke *ngIf="info"></app-chuck-joke>
 <div *ngIf="info">
     <button mat-button [disabled]="serviceAdmin.logged" (click)="activeDroits()">Activer droits</button><p></p>
     <button mat-fab color="primary" [disabled]="!info.prev" (click)="clickPrev()">Prev</button> {{page}} / {{info.pages}} <button mat-fab color="primary" [disabled]="!info.next" (click)="clickNext()">Next</button>
